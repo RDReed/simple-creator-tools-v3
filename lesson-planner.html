@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>45-Minute Sunday School Lesson Planner | Simple Creator Tools</title>
+
+  <meta name="description" content="Create a simple 45-minute Sunday School lesson outline instantly." />
+
+  <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f5f7fb;
+      color: #222;
+    }
+
+    header {
+      background: #1f4e79;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    nav {
+      background: white;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    nav a {
+      color: #1f4e79;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    .tool-box,
+    .output-box,
+    .info-section {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      margin-bottom: 30px;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 8px;
+      margin-bottom: 18px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+
+    button {
+      background: #1f4e79;
+      color: white;
+      border: none;
+      padding: 14px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background: #163a59;
+    }
+
+    .output-box {
+      white-space: pre-wrap;
+      line-height: 1.7;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>45-Minute Sunday School Lesson Planner</h1>
+    <p>Create a structured lesson outline instantly.</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="lesson-planner.html">Lesson Planner</a>
+  </nav>
+
+  <main>
+
+    <section class="tool-box">
+
+      <label>Lesson Title</label>
+      <input type="text" id="lessonTitle" placeholder="Example: Living in Christian Community">
+
+      <label>Scripture Passage</label>
+      <input type="text" id="scripture" placeholder="Example: Hebrews 10:22-25">
+
+      <label>Class Type</label>
+      <select id="classType">
+        <option>Adults</option>
+        <option>Young Adults</option>
+        <option>Teens</option>
+        <option>Mixed Group</option>
+      </select>
+
+      <label>Technology Available</label>
+      <select id="technology">
+        <option>Projector</option>
+        <option>TV</option>
+        <option>Printed Handouts</option>
+        <option>Both</option>
+      </select>
+
+      <label>Lesson Length</label>
+      <select id="lessonLength">
+        <option>30 Minutes</option>
+        <option selected>45 Minutes</option>
+        <option>60 Minutes</option>
+      </select>
+
+      <label>Main Theme</label>
+      <textarea id="theme" placeholder="Example: Encouraging one another in faith"></textarea>
+
+      <button onclick="generateLesson()">Generate Lesson Outline</button>
+
+    </section>
+
+    <section class="output-box" id="lessonOutput">
+
+Your lesson outline will appear here.
+
+    </section>
+
+    <section class="info-section">
+
+      <h2>About This Tool</h2>
+
+      <p>
+        This free lesson planner helps Sunday School teachers quickly create
+        structured Bible lesson outlines for classes and small groups.
+      </p>
+
+    </section>
+
+  </main>
+
+  <footer>
+    &copy; 2026 Simple Creator Tools. All rights reserved.
+  </footer>
+
+  <script>
+
+    function generateLesson() {
+
+      const title = document.getElementById("lessonTitle").value;
+      const scripture = document.getElementById("scripture").value;
+      const classType = document.getElementById("classType").value;
+      const technology = document.getElementById("technology").value;
+      const lessonLength = document.getElementById("lessonLength").value;
+      const theme = document.getElementById("theme").value;
+
+      const output = `
+
+LESSON SNAPSHOT
+------------------------
+Title: ${title}
+
+Scripture: ${scripture}
+
+Class Type: ${classType}
+
+Technology Available: ${technology}
+
+Lesson Length: ${lessonLength}
+
+Main Theme:
+${theme}
+
+
+BIG IDEA
+------------------------
+Help students understand the importance of:
+${theme}
+
+
+LEARNING OBJECTIVES
+------------------------
+1. Understand the main teaching of ${scripture}
+
+2. Discuss how this lesson applies to daily life
+
+3. Encourage personal spiritual growth and application
+
+
+OPENING PRAYER
+------------------------
+Heavenly Father, thank You for bringing us together today.
+Open our hearts and minds to understand Your Word.
+Help us apply these truths to our daily lives.
+In Jesus' name, Amen.
+
+
+CONTEXT OVERVIEW
+------------------------
+Discuss the historical and biblical background of:
+${scripture}
+
+Explain how the passage connects to the overall message of Scripture.
+
+
+PASSAGE BREAKDOWN
+------------------------
+1. Read the Scripture passage together
+
+2. Explain key verses and important themes
+
+3. Discuss practical application points
+
+4. Encourage class participation and discussion
+
+
+DISCUSSION QUESTIONS
+------------------------
+1. What stands out most in this passage?
+
+2. How does this lesson apply today?
+
+3. What changes can we make based on this lesson?
+
+4. How can we encourage others with this teaching?
+
+
+APPLICATION CHALLENGE
+------------------------
+Encourage students to apply one principle from this lesson during the upcoming week.
+
+
+CLOSING PRAYER
+------------------------
+Lord, thank You for Your Word and truth.
+Help us live out what we have learned today.
+Guide and strengthen us throughout this week.
+In Jesus' name, Amen.
+
+`;
+
+      document.getElementById("lessonOutput").textContent = output;
+    }
+
+  </script>
+
+</body>
+</html>
