@@ -139,6 +139,200 @@
         margin: 6px 8px;
       }
     }
+
+# Homepage Upgrade — Featured + Creator + Ministry Sections
+
+## Step 1 — Find This Section In `index.html`
+
+Find:
+
+```html
+<section class="tools-grid">
+```
+
+Everything inside that section can be replaced with the new organized layout below.
+
+---
+
+# Step 2 — Replace Your Current Tool Section With This
+
+```html
+<!-- FEATURED TOOL SECTION -->
+
+<section class="featured-section">
+
+  <h2>⭐ Featured Ministry Tool</h2>
+
+  <div class="featured-tool-card">
+
+    <h3>45-Minute Sunday School Lesson Planner</h3>
+
+    <p>
+      Create structured Sunday School lesson outlines instantly for Bible studies,
+      adult classes, youth groups, and teaching preparation.
+    </p>
+
+    <a href="lesson-planner.html">Open Lesson Planner</a>
+
+  </div>
+
+</section>
+
+
+<!-- CREATOR TOOLS SECTION -->
+
+<section class="category-section">
+
+  <h2>Creator Tools</h2>
+
+  <div class="tools-grid">
+
+    <div class="tool-card">
+      <h3>Word Counter</h3>
+      <p>
+        Count words, characters, sentences, and reading time instantly.
+      </p>
+      <a href="word-counter.html">Open Tool</a>
+    </div>
+
+    <div class="tool-card">
+      <h3>Text Case Converter</h3>
+      <p>
+        Convert text to uppercase, lowercase, title case, or sentence case.
+      </p>
+      <a href="text-case-converter.html">Open Tool</a>
+    </div>
+
+    <div class="tool-card">
+      <h3>Line Break Remover</h3>
+      <p>
+        Remove line breaks and extra spacing from copied text.
+      </p>
+      <a href="line-break-remover.html">Open Tool</a>
+    </div>
+
+    <div class="tool-card">
+      <h3>Duplicate Line Remover</h3>
+      <p>
+        Remove repeated lines from notes, lists, and copied text.
+      </p>
+      <a href="duplicate-line-remover.html">Open Tool</a>
+    </div>
+
+    <div class="tool-card">
+      <h3>Social Media Counter</h3>
+      <p>
+        Check character counts for YouTube, LinkedIn, Instagram, and X.
+      </p>
+      <a href="social-media-counter.html">Open Tool</a>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- MINISTRY TOOLS SECTION -->
+
+<section class="category-section">
+
+  <h2>Ministry Tools</h2>
+
+  <div class="tools-grid">
+
+    <div class="tool-card">
+      <h3>45-Minute Lesson Planner</h3>
+      <p>
+        Generate structured Bible lesson outlines instantly.
+      </p>
+      <a href="lesson-planner.html">Open Tool</a>
+    </div>
+
+    <div class="tool-card coming-soon">
+      <h3>Sermon Timer</h3>
+      <p>
+        Track sermon and teaching time for classes and presentations.
+      </p>
+      <a href="#">Coming Soon</a>
+    </div>
+
+    <div class="tool-card coming-soon">
+      <h3>Scripture Formatter</h3>
+      <p>
+        Format Bible verses cleanly for slides, lessons, and handouts.
+      </p>
+      <a href="#">Coming Soon</a>
+    </div>
+
+    <div class="tool-card coming-soon">
+      <h3>Bible Reading Tracker</h3>
+      <p>
+        Track Bible reading plans and scripture study progress.
+      </p>
+      <a href="#">Coming Soon</a>
+    </div>
+
+  </div>
+
+</section>
+
+
+.featured-section {
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+.featured-section h2,
+.category-section h2 {
+  color: #1f4e79;
+  margin-bottom: 20px;
+}
+
+.featured-tool-card {
+  background: linear-gradient(135deg, #1f4e79, #2f6aa3);
+  color: white;
+  padding: 35px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.featured-tool-card h3 {
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+.featured-tool-card p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 700px;
+}
+
+.featured-tool-card a {
+  display: inline-block;
+  margin-top: 18px;
+  background: white;
+  color: #1f4e79;
+  padding: 14px 22px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.featured-tool-card a:hover {
+  background: #f0f4f8;
+}
+
+.category-section {
+  margin-top: 50px;
+}
+
+.category-section .tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+
   </style>
 </head>
 
@@ -165,62 +359,128 @@
       </p>
     </section>
 
-    <section class="tools-grid">
+   
 
-<div class="tool-card">
+<!-- FEATURED TOOL SECTION -->
 
-  <h2>45-Minute Lesson Planner</h2>
+<section class="featured-section">
 
-  <p>
-    Create structured Sunday School lesson outlines instantly for classes and Bible studies.
-  </p>
+  <h2>⭐ Featured Ministry Tool</h2>
 
-  <a href="lesson-planner.html">Open Tool</a>
+  <div class="featured-tool-card">
 
-</div>
+    <h3>45-Minute Sunday School Lesson Planner</h3>
+
+    <p>
+      Create structured Sunday School lesson outlines instantly for Bible studies,
+      adult classes, youth groups, and teaching preparation.
+    </p>
+
+    <a href="lesson-planner.html">Open Lesson Planner</a>
+
+  </div>
+
+</section>
 
 
-      <div class="tool-card">
-        <h2>Word Counter</h2>
-        <p>
-          Count words, characters, sentences, paragraphs, and estimated reading time instantly.
-        </p>
-        <a href="word-counter.html">Open Tool</a>
-      </div>
+<!-- CREATOR TOOLS SECTION -->
 
-      <div class="tool-card ">
-        <h2>Text Case Converter</h2>
-        <p>
-          Convert text to uppercase, lowercase, title case, or sentence case.
-        </p>
-        <a href="text-case-converter.html">Open Tool</a>
-      </div>
+<section class="category-section">
 
-      <div class="tool-card ">
-        <h2>Line Break Remover</h2>
-        <p>
-          Clean messy copied text by removing extra line breaks and spacing.
-        </p>
-        <a href="line-break-remover.html">Open Tool</a>
-      </div>
+  <h2>Creator Tools</h2>
 
-      <div class="tool-card">
-        <h2>Duplicate Line Remover</h2>
-        <p>
-          Remove repeated lines from lists, notes, scripts, or copied text.
-        </p>
-        <a href="duplicate-line-remover.html">Open Tool</a>
-      </div>
+  <div class="tools-grid">
 
-      <div class="tool-card">
-        <h2>Social Media Counter</h2>
-        <p>
-          Check character limits for YouTube, LinkedIn, Instagram, and other platforms.
-        </p>
-        <a href="social-media-counter.html">Open Tool</a>
-      </div>
+    <div class="tool-card">
+      <h3>Word Counter</h3>
+      <p>
+        Count words, characters, sentences, and reading time instantly.
+      </p>
+      <a href="word-counter.html">Open Tool</a>
+    </div>
 
-    </section>
+    <div class="tool-card">
+      <h3>Text Case Converter</h3>
+      <p>
+        Convert text to uppercase, lowercase, title case, or sentence case.
+      </p>
+      <a href="text-case-converter.html">Open Tool</a>
+    </div>
+
+    <div class="tool-card">
+      <h3>Line Break Remover</h3>
+      <p>
+        Remove line breaks and extra spacing from copied text.
+      </p>
+      <a href="line-break-remover.html">Open Tool</a>
+    </div>
+
+    <div class="tool-card">
+      <h3>Duplicate Line Remover</h3>
+      <p>
+        Remove repeated lines from notes, lists, and copied text.
+      </p>
+      <a href="duplicate-line-remover.html">Open Tool</a>
+    </div>
+
+    <div class="tool-card">
+      <h3>Social Media Counter</h3>
+      <p>
+        Check character counts for YouTube, LinkedIn, Instagram, and X.
+      </p>
+      <a href="social-media-counter.html">Open Tool</a>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- MINISTRY TOOLS SECTION -->
+
+<section class="category-section">
+
+  <h2>Ministry Tools</h2>
+
+  <div class="tools-grid">
+
+    <div class="tool-card">
+      <h3>45-Minute Lesson Planner</h3>
+      <p>
+        Generate structured Bible lesson outlines instantly.
+      </p>
+      <a href="lesson-planner.html">Open Tool</a>
+    </div>
+
+    <div class="tool-card coming-soon">
+      <h3>Sermon Timer</h3>
+      <p>
+        Track sermon and teaching time for classes and presentations.
+      </p>
+      <a href="#">Coming Soon</a>
+    </div>
+
+    <div class="tool-card coming-soon">
+      <h3>Scripture Formatter</h3>
+      <p>
+        Format Bible verses cleanly for slides, lessons, and handouts.
+      </p>
+      <a href="#">Coming Soon</a>
+    </div>
+
+    <div class="tool-card coming-soon">
+      <h3>Bible Reading Tracker</h3>
+      <p>
+        Track Bible reading plans and scripture study progress.
+      </p>
+      <a href="#">Coming Soon</a>
+    </div>
+
+  </div>
+
+</section>
+
+
 
     <section class="info-section">
       <h2>Why Use Simple Creator Tools?</h2>
